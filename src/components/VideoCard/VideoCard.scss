@@ -1,0 +1,32 @@
+@import '../../index.scss';
+
+.video__card {
+	aspect-ratio: 16/9;
+	border-radius: 5rem;
+	box-shadow: $box-shadow1;
+	margin: 5rem 0;
+	overflow: hidden;
+	width: 80%;
+}
+
+@supports (-moz-appearance: none) {
+	.video__card {
+		width: max-content;
+		width: -moz-max-content;
+		max-width: 80%;
+	}
+}
+
+@media (max-width: 600px) {
+	.video__card {
+		width: 95%;
+	}
+
+	@supports (-moz-appearance: none) {
+		.video__card {
+			width: max-content;
+			width: -moz-max-content;
+			max-width: 95%;
+		}
+	}
+}

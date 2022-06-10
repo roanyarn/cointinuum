@@ -1,0 +1,52 @@
+@import '../../index.scss';
+
+.possibilities {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 4rem;
+	margin-bottom: 2rem;
+	cursor: pointer;
+}
+
+.possibilities__image--container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 28rem;
+	height: 46rem;
+}
+
+.possibilities__image {
+	position: absolute;
+	width: 35rem;
+	transition: all 0.3s;
+
+	&:hover {
+		transform: scale(1.05);
+		-webkit-filter: $image-shadow1;
+	}
+}
+
+.possibilities__image--dark {
+	&:hover {
+		-webkit-filter: $image-shadow2;
+	}
+}
+
+.possibilities__title {
+	font-size: 2.25rem;
+	margin-top: -6rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+
+.paragraph__content {
+	width: 23.5rem;
+	font-size: 1.5rem;
+	font-weight: 300;
+	line-height: 2.25rem;
+	letter-spacing: 0.02em;
+	text-align: center;
+	margin-bottom: 2rem;
+}

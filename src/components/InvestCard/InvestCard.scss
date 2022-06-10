@@ -1,0 +1,134 @@
+@import '../../index.scss';
+
+.investCard__card {
+	display: grid;
+	grid-template-columns: repeat(16, 1fr);
+	grid-template-rows: repeat(9, 1fr);
+	background: $card-background1;
+	border: $border1;
+	border-radius: 5rem;
+	box-shadow: $box-shadow1;
+	width: 80%;
+	max-width: 128rem;
+	height: 75vh;
+}
+
+.investCard__card--dark {
+	background: $card-background2;
+	color: $color-dark;
+}
+
+.investCard__close {
+	align-self: center;
+	justify-self: center;
+	grid-column-start: 16;
+	grid-column-end: 17;
+	background-color: $color-light;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 3rem;
+	box-shadow: $box-shadow3;
+}
+
+.investCard__image {
+	align-self: center;
+	justify-self: center;
+	grid-column-start: 2;
+	grid-column-end: 9;
+	grid-row-start: 3;
+	grid-row-end: 7;
+	width: 100%;
+}
+
+.investCard__info {
+	grid-column-start: 10;
+	grid-column-end: 16;
+	grid-row-start: 3;
+	grid-row-end: 7;
+}
+
+.investCard__name {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.investCard__list {
+	margin-top: 2rem;
+	padding-left: 2rem;
+	font-size: 1.25rem;
+}
+
+.investCard__paragraph {
+	font-size: 1.25rem;
+	margin-top: 2rem;
+}
+
+.investCard__paragraph--container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.investCard__button {
+	font-size: 1.25rem;
+	margin-top: 2rem;
+	margin-left: 0.5rem;
+	background: $text-gradient1;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: all 0.5s;
+	cursor: pointer;
+
+	&:hover {
+		transform: translateX(1rem);
+	}
+}
+
+@media (max-width: 950px) {
+	.investCard__card {
+		padding: 0;
+		height: 95vh;
+		overflow: scroll;
+	}
+	.investCard__image {
+		grid-column-start: 3;
+		grid-column-end: 15;
+		grid-row-start: 2;
+		grid-row-end: 6;
+		width: 90%;
+	}
+
+	.investCard__info {
+		align-items: center;
+		grid-column-start: 3;
+		grid-column-end: 15;
+		grid-row-start: 6;
+		grid-row-end: 10;
+	}
+}
+
+@media (max-width: 600px) {
+	.investCard__card {
+		grid-template-rows: repeat(20, 1fr);
+		border-radius: 3rem;
+		padding-bottom: 5rem;
+	}
+
+	.investCard__close {
+		grid-column-start: 15;
+		grid-row-start: 1;
+		grid-row-end: 3;
+	}
+
+	.investCard__image {
+		grid-column-start: 2;
+		grid-column-end: 16;
+		grid-row-start: 2;
+		grid-row-end: 10;
+	}
+
+	.investCard__info {
+		grid-row-start: 10;
+		grid-row-end: 20;
+	}
+}

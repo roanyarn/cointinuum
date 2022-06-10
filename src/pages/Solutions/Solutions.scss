@@ -1,0 +1,33 @@
+@import '../../index.scss';
+
+/* The main styles file has been set to font-size: 62.5%. This to use rem equal 1rem = 10px; */
+
+.solutions {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: $background1;
+	padding-top: 12rem;
+	padding-bottom: 5rem;
+	width: 100vw;
+}
+
+.solutions__dark {
+	background: $background3;
+	color: $color-light;
+}
+
+.solutions__testImage {
+	width: 25%;
+	-webkit-filter: $image-shadow1;
+	animation: rotation 10s infinite linear;
+
+	@keyframes rotation {
+		from {
+			-webkit-transform: rotate(0deg);
+		}
+		to {
+			-webkit-transform: rotate(-359deg);
+		}
+	}
+}

@@ -1,0 +1,65 @@
+@import '../../index.scss';
+
+.map__image {
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s;
+
+	&:hover {
+		-webkit-filter: $animation-shadow2;
+	}
+}
+
+.map__image--dark {
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+.map__institutions {
+	align-self: center;
+	justify-self: center;
+	grid-column-start: 1;
+	grid-column-end: 21;
+	grid-row-start: 1;
+	grid-row-end: 8;
+	width: 100%;
+}
+
+.map__realEstate {
+	grid-column-start: 24;
+	grid-column-end: 33;
+	grid-row-start: 1;
+	grid-row-end: 7;
+	width: 95%;
+}
+
+.map__crypto {
+	align-self: center;
+	grid-column-start: 1;
+	grid-column-end: 10;
+	grid-row-start: 10;
+	grid-row-end: 17;
+	width: 95%;
+}
+
+.map__communityCenter {
+	align-self: center;
+	justify-self: center;
+	grid-column-start: 15;
+	grid-column-end: 25;
+	grid-row-start: 13;
+	grid-row-end: 15;
+	width: 95%;
+}
+
+.map__creatives {
+	grid-column-start: 25;
+	grid-column-end: 33;
+	grid-row-start: 10;
+	grid-row-end: 16;
+	width: 95%;
+}
+
+

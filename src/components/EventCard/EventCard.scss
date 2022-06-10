@@ -1,0 +1,79 @@
+@import '../../index.scss';
+
+.eventCard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $component-background1;
+	backdrop-filter: blur(2rem);
+	border: $border1;
+	border-radius: 3rem;
+	box-shadow: $box-shadow1;
+	overflow: hidden;
+	margin: 3rem 1rem 5rem 1rem;
+	margin-bottom: 5rem;
+	padding: 2rem;
+	padding-top: 4rem;
+	width: 30rem;
+	height: 40rem;
+	transition: all 0.3s;
+
+	&:hover {
+		transform: scale(1.01);
+		box-shadow: $box-shadow4;
+	}
+}
+
+.eventCard--dark {
+	background: $component-background2;
+}
+
+.eventCard__info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.eventCard__title--container {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+}
+
+.eventCard__title {
+	font-size: 1.6rem;
+	color: $color-warm2;
+}
+
+.eventCard__subTitle {
+	font-size: 1.8rem;
+	margin-bottom: 2rem;
+}
+
+.eventCard__time {
+	font-size: 1.6rem;
+}
+
+.eventCard__date {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 30%;
+	height: 15rem;
+}
+
+.eventCard__day {
+	font-size: 3.6rem;
+}
+
+.eventCard__month {
+	letter-spacing: 0.2rem;
+}
+
+.eventCard__image {
+	border-radius: 2.5rem;
+	width: 23rem;
+	height: 18rem;
+	object-fit: cover;
+}

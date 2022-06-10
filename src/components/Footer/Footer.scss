@@ -1,0 +1,374 @@
+@import '../../index.scss';
+
+.footer {
+	display: grid;
+	grid-template-columns: repeat(17, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+	background: $footer-background;
+	color: $color-light;
+	width: 100vw;
+}
+
+.footer--dark {
+	border-top: $border1;
+}
+
+.footer__lists--container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 5rem;
+	width: 80%;
+}
+
+.footer__logo {
+	width: 25rem;
+	grid-column-start: 3;
+	grid-column-end: 8;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+.footer__email {
+	padding-bottom: 1rem;
+	grid-column-start: 8;
+	grid-column-end: 17;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+.footer__input {
+	background-color: rgba($color-light, 0.1);
+	border: solid 0.18rem $color-cold2;
+	border-radius: 1rem;
+	color: $color-light;
+	font-size: 2rem;
+	padding: 1rem;
+	width: 100%;
+
+	&:focus {
+		outline: solid 0.18rem $color-cold2;
+	}
+}
+
+.footer__button {
+	position: absolute;
+	border: none;
+}
+
+.footer__arrow {
+	position: absolute;
+	background: $text-gradient1;
+	border-radius: 50%;
+	color: $color-light;
+	font-size: 3rem;
+	margin-top: 1.1rem;
+	margin-left: -5rem;
+	cursor: pointer;
+}
+
+.footer__message--success {
+	font-size: 2.6rem;
+	background: $text-gradient1;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	margin: 2rem 0 0 0;
+	text-align: center;
+	grid-column-start: 8;
+	grid-column-end: 17;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+.footer__lists {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 20rem;
+	margin-bottom: 5rem;
+}
+
+.list__resources {
+	grid-column-start: 3;
+	grid-column-end: 6;
+	grid-row-start: 4;
+	grid-row-end: 7;
+}
+
+.list__connect {
+	grid-column-start: 8;
+	grid-column-end: 11;
+	grid-row-start: 4;
+	grid-row-end: 7;
+}
+
+.list__getInvolved {
+	grid-column-start: 13;
+	grid-column-end: 16;
+	grid-row-start: 4;
+	grid-row-end: 7;
+}
+
+.footer__title {
+	font-size: 2.8rem;
+	margin-bottom: 1.5rem;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+}
+
+.footer__list {
+	list-style: none;
+}
+
+.footer__item {
+	cursor: pointer;
+	font-size: 2.4rem;
+	font-weight: 300;
+	letter-spacing: 0.02em;
+	line-height: 4.5rem;
+	transition: all 0.5s;
+
+	&:hover {
+		transform: translateX(1%);
+	}
+}
+
+.footer__socialMedia {
+	color: $color-light;
+	justify-self: center;
+	font-size: 3rem;
+	transition: all 0.5s;
+
+	&:hover {
+		transform: scale(1.5);
+	}
+}
+
+.footer__twitter {
+	grid-column-start: 8;
+	grid-column-end: 9;
+	grid-row-start: 7;
+	grid-row-end: 8;
+}
+
+.footer__reddit {
+	grid-column-start: 9;
+	grid-column-end: 10;
+	grid-row-start: 7;
+	grid-row-end: 8;
+}
+
+.footer__discord {
+	grid-column-start: 10;
+	grid-column-end: 11;
+	grid-row-start: 7;
+	grid-row-end: 8;
+}
+
+.footer__telegram {
+	grid-column-start: 11;
+	grid-column-end: 12;
+	grid-row-start: 7;
+	grid-row-end: 8;
+}
+
+.footer__instagram {
+	grid-column-start: 12;
+	grid-column-end: 13;
+	grid-row-start: 7;
+	grid-row-end: 8;
+}
+
+.footer__linkedIn {
+	grid-column-start: 13;
+	grid-column-end: 14;
+	grid-row-start: 7;
+	grid-row-end: 8;
+}
+
+.footer__youtube {
+	grid-column-start: 14;
+	grid-column-end: 15;
+	grid-row-start: 7;
+	grid-row-end: 8;
+}
+
+.footer__rarible {
+	grid-column-start: 15;
+	grid-column-end: 16;
+	grid-row-start: 7;
+	grid-row-end: 8;
+}
+
+.footer__social-rarible {
+	width: 3.5rem;
+}
+
+.footer__copywrite {
+	font-size: 1.8rem;
+	align-self: flex-start;
+	justify-self: center;
+	grid-column-start: 2;
+	grid-column-end: 17;
+	grid-row-start: 8;
+	grid-row-end: 9;
+}
+
+.footer__privacy {
+	color: $color-light;
+	margin-left: 0.5rem;
+	text-decoration: none;
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+}
+
+@media (max-width: 770px) {
+	.footer__email {
+		grid-column-start: 2;
+		grid-column-end: 17;
+	}
+
+	.footer__message--success {
+		grid-column-start: 2;
+		grid-column-end: 17;
+	}
+
+	.footer__logo {
+		width: 25rem;
+		justify-self: center;
+		align-self: flex-start;
+		grid-column-start: 2;
+		grid-column-end: 17;
+		grid-row-start: 3;
+		grid-row-end: 4;
+	}
+
+	.footer__copywrite {
+		font-size: 1.8rem;
+		text-align: center;
+		grid-column-start: 2;
+		grid-column-end: 17;
+		grid-row-start: 8;
+		grid-row-end: 9;
+	}
+}
+
+@media (max-width: 650px) {
+	.footer {
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-rows: repeat(28, 4rem);
+	}
+
+	.footer__email {
+		align-self: center;
+		grid-column-start: 2;
+		grid-column-end: 10;
+		grid-row-start: 2;
+		grid-row-end: 4;
+	}
+
+	.footer__message--success {
+		align-self: center;
+		grid-column-start: 2;
+		grid-column-end: 10;
+		grid-row-start: 2;
+		grid-row-end: 4;
+	}
+
+	.footer__logo {
+		grid-column-start: 2;
+		grid-column-end: 10;
+		grid-row-start: 4;
+		grid-row-end: 5;
+	}
+
+	.list__resources {
+		grid-column-start: 2;
+		grid-column-end: 8;
+		grid-row-start: 6;
+		grid-row-end: 10;
+	}
+
+	.list__connect {
+		grid-column-start: 2;
+		grid-column-end: 8;
+		grid-row-start: 14;
+		grid-row-end: 18;
+	}
+
+	.list__getInvolved {
+		grid-column-start: 2;
+		grid-column-end: 8;
+		grid-row-start: 20;
+		grid-row-end: 24;
+	}
+
+	.footer__twitter {
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 25;
+		grid-row-end: 26;
+	}
+
+	.footer__reddit {
+		grid-column-start: 3;
+		grid-column-end: 4;
+		grid-row-start: 25;
+		grid-row-end: 26;
+	}
+
+	.footer__discord {
+		grid-column-start: 4;
+		grid-column-end: 5;
+		grid-row-start: 25;
+		grid-row-end: 26;
+	}
+
+	.footer__telegram {
+		grid-column-start: 5;
+		grid-column-end: 6;
+		grid-row-start: 25;
+		grid-row-end: 26;
+	}
+
+	.footer__instagram {
+		grid-column-start: 6;
+		grid-column-end: 7;
+		grid-row-start: 25;
+		grid-row-end: 26;
+	}
+
+	.footer__linkedIn {
+		grid-column-start: 7;
+		grid-column-end: 8;
+		grid-row-start: 25;
+		grid-row-end: 26;
+	}
+
+	.footer__youtube {
+		grid-column-start: 8;
+		grid-column-end: 9;
+		grid-row-start: 25;
+		grid-row-end: 26;
+	}
+
+	.footer__rarible {
+		grid-column-start: 9;
+		grid-column-end: 10;
+		grid-row-start: 25;
+		grid-row-end: 26;
+	}
+
+	.footer__copywrite {
+		font-size: 1.4rem;
+		grid-column-start: 2;
+		grid-column-end: 10;
+		grid-row-start: 27;
+		grid-row-end: 28;
+	}
+}

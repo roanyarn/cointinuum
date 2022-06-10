@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+$font1: 'Poppins', sans-serif;
+
+$color-light: #ffffff;
+$color-dark: #45403c;
+$color-cold1: #8c4fe8;
+$color-cold2: #5564f2;
+$color-cold3: #18c2ef;
+$color-warm1: #fe245d;
+$color-warm2: #f59126;
+$color-warm3: #fdc529;
+
+$background1: linear-gradient(
+	174.86deg,
+	#fff7e1 0%,
+	#feefe0 18.75%,
+	#ffe0e8 37.68%,
+	#efe6fc 57.35%,
+	#e7e9fd 77.78%,
+	#def6fd 100%
+);
+$background2: linear-gradient(
+	174.86deg,
+	#def6fd 0%,
+	#e7e9fd 18.75%,
+	#efe6fc 37.68%,
+	#ffe0e8 57.35%,
+	#feefe0 77.78%,
+	#fff7e1 100%
+);
+$background3: linear-gradient(
+	174.49deg,
+	#0b1d40 1.13%,
+	#2f3c86 15.46%,
+	#5373aa 28.81%,
+	#8e6ab6 44.69%,
+	#7b64b8 58.65%,
+	#1c276f 73.91%,
+	#2a1a6e 83.51%,
+	#040404 95.6%
+);
+
+$button-gradient1: linear-gradient(
+		to right,
+		$color-cold1,
+		$color-cold2,
+		$color-cold3
+	)
+	border-box;
+$button-gradient2: linear-gradient(
+		to right,
+		$color-warm1,
+		$color-warm2,
+		$color-warm3
+	)
+	border-box;
+
+$text-gradient1: linear-gradient(
+	99.01deg,
+	$color-cold1 0%,
+	$color-cold2 64.02%,
+	$color-cold3 99.12%
+);
+$text-gradient2: linear-gradient(
+	92.01deg,
+	$color-warm1 0%,
+	$color-warm2 64.02%,
+	$color-warm3 99.12%
+);
+
+$component-background1: rgba($color-light, 0.2);
+$component-background2: linear-gradient(
+	155deg,
+	rgba(#ffffff, 0.25) 10%,
+	rgba(#000000, 0.05) 60%
+);
+
+$card-background1: radial-gradient(
+	100.06% 223.63% at 6.22% 43.36%,
+	#effbfe 0%,
+	#f3f4fe 63.51%,
+	#f7f2fd 100%
+);
+$card-background2: linear-gradient(
+	124.78deg,
+	#8284ae 0%,
+	#505a88 33.33%,
+	#373b57 65.1%,
+	#24294a 100%
+);
+
+$footer-background: #1b1c2a;
+$modal-background: rgba($color-dark, 0.2);
+$input-background: rgba($color-light, 0.2);
+
+$box-shadow1: 0.5rem 1.5rem 4rem rgba($color-dark, 0.3);
+$box-shadow2: 0.5rem 0.5rem 2rem rgba(#000000, 0.4);
+$box-shadow3: 0rem 0.2rem 0.9rem rgba($color-dark, 0.9);
+$box-shadow4: 0.5rem 1.5rem 3rem rgba(#000000, 0.3);
+
+$image-shadow1: drop-shadow(0.5rem 1.5rem 0.5rem rgba($color-dark, 0.3));
+$image-shadow2: drop-shadow(0 0 2rem rgba($color-cold3, 0.3));
+
+$animation-shadow2: drop-shadow(0 0 2.5rem rgba(#000000, 1));
+
+$border1: 0.1rem solid rgba($color-light, 0.3);
+
+* {
+	box-sizing: border-box;
+	font-family: $font1;
+	letter-spacing: '0.02em';
+	text-shadow: 5px 10px 30px rgba(0, 0, 0, 0.2);
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	color: $color-dark;
+}

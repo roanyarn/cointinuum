@@ -1,0 +1,56 @@
+@import '../../index.scss';
+
+.title__component {
+	margin-top: 5rem;
+	width: 80%;
+}
+
+.title__component--title {
+	font-size: 3.438rem;
+	font-weight: 600;
+	margin-bottom: 2rem;
+	text-align: center;
+	line-height: 5.125rem;
+}
+
+.title__component--paragraph {
+	font-size: 1.875rem;
+	text-align: center;
+	line-height: 2.813rem;
+	font-weight: 300;
+}
+
+.title__component--paragraph2 {
+	font-size: 1.875rem;
+	text-align: center;
+	line-height: 2.813rem;
+	font-weight: 300;
+	padding-top: 1rem;
+}
+
+.title__span {
+	background: $text-gradient2;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 950px) {
+	.title__component--title {
+		font-size: 3.2rem;
+	}
+
+	.title__component--paragraph {
+		font-size: 1.8rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.title__component--title {
+		font-size: 2.8rem;
+	}
+
+	.title__component--paragraph {
+		font-size: 1.8rem;
+	}
+}

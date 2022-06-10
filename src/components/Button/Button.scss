@@ -1,0 +1,109 @@
+@import '../../index.scss';
+
+.btn__primary {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border: none;
+	border-radius: 3rem;
+	box-shadow: $box-shadow1;
+	color: $color-cold2;
+	padding: 3rem 5rem;
+	font-size: 2.5rem;
+	font-weight: 500;
+	height: 5rem;
+	margin: 5rem;
+	background: $text-gradient1;
+	background-clip: text;
+	-webkit-background-clip: text;
+	cursor: pointer;
+
+	&:hover {
+		background-clip: unset;
+		-webkit-background-clip: unset;
+		-webkit-text-fill-color: unset;
+		color: $color-light;
+	}
+}
+
+.btn__primary--dark {
+	box-shadow: $box-shadow2;
+}
+
+.btn__primary::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 3rem;
+	border: 0.3rem solid transparent;
+	background: $button-gradient1;
+	-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+	mask-composite: exclude;
+}
+
+.btn__secondary {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border: none;
+	border-radius: 3rem;
+	box-shadow: $box-shadow1;
+	color: $color-warm2;
+	font-size: 2.5rem;
+	font-weight: 500;
+	padding: 3rem 5rem;
+	height: 5rem;
+	margin: 5rem;
+	background: $text-gradient2;
+	background-clip: text;
+	-webkit-background-clip: text;
+	cursor: pointer;
+
+	&:hover {
+		background-clip: unset;
+		-webkit-background-clip: unset;
+		-webkit-text-fill-color: unset;
+		color: $color-light;
+	}
+}
+
+.btn__secondary--dark {
+	box-shadow: $box-shadow2;
+}
+
+.btn__secondary::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 2.5rem;
+	border: 0.3rem solid transparent;
+	background: $button-gradient2;
+	-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+	mask-composite: exclude;
+}
+
+@media (max-width: 450px) {
+	.btn__primary {
+		font-size: 2.3rem;
+	}
+
+	.btn__secondary {
+		font-size: 2.3rem;
+	}
+}
+
+@media (max-width: 423px) {
+	.btn__primary {
+		font-size: 1.6rem;
+	}
+
+	.btn__secondary {
+		font-size: 1.6rem;
+	}
+}

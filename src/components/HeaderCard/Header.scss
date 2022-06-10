@@ -1,0 +1,117 @@
+/* The main styles file has been set to font-size: 62.5%. This to use rem equal 1rem = 10px; */
+
+@import '../../index.scss';
+
+.header__card {
+	margin: 5rem 0;
+	padding: 5rem 3rem;
+	width: 80%;
+}
+
+.header__card--dark {
+	color: $color-light;
+}
+
+.header__image {
+	border-radius: 3rem;
+	width: 88%;
+	margin-left: 8rem;
+	margin-top: -25rem;
+	-webkit-filter: $image-shadow1;
+}
+
+.header__info {
+	position: relative;
+	width: 60%;
+	margin-top: -3rem;
+}
+
+.header__title {
+	font-size: 3.438rem;
+	font-weight: 500;
+	font-style: 'Poppins';
+	margin-bottom: 3rem;
+	line-height: 5.125rem;
+}
+
+.header__paragraph {
+	font-size: 1.875rem;
+	line-height: 2.813rem;
+	font-weight: 300;
+	width: 75%;
+}
+
+.header__reverse {
+	flex-direction: row-reverse;
+}
+
+@media (max-width: 1070px) {
+	.header__title {
+		font-size: 2rem;
+	}
+	.header__paragraph {
+		font-size: 1.8rem;
+	}
+	.header__image {
+		padding-top: 2rem;
+	}
+}
+
+@media (max-width: 1300px) {
+	.header__info {
+		width: 60%;
+	}
+	.header__image {
+		padding-top: 5rem;
+	}
+	.header__title {
+		font-size: 2rem;
+		line-height: 3rem;
+	}
+	.header__paragraph {
+		font-size: 1.8rem;
+	}
+	.header__info {
+		margin-bottom: 2rem;
+	}
+}
+
+@media (max-width: 900px) {
+	.header__info {
+		width: 60%;
+	}
+	.header__image {
+		width: 90%;
+		margin-bottom: -10rem;
+	}
+	.header__title {
+		font-size: 2rem;
+		line-height: 3rem;
+	}
+	.header__paragraph {
+		font-size: 1.8rem;
+	}
+	.header__info {
+		margin-bottom: 2rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.header__info {
+		width: 80%;
+	}
+	.header__image {
+		width: 90%;
+		margin-bottom: -10rem;
+	}
+	.header__title {
+		font-size: 2rem;
+		line-height: 3rem;
+	}
+	.header__paragraph {
+		font-size: 1.8rem;
+	}
+	.header__info {
+		margin-bottom: 2rem;
+	}
+}

@@ -1,0 +1,180 @@
+@import '../../index.scss';
+
+.connect {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: $background2;
+	padding-top: 12rem;
+	padding-bottom: 5rem;
+	width: 100vw;
+}
+
+.connect__dark {
+	background: $background3;
+	color: $color-light;
+}
+
+.connect__image--container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	background-color: $component-background1;
+	backdrop-filter: blur(2rem);
+	border: $border1;
+	border-radius: 3rem;
+	box-shadow: $box-shadow1;
+	overflow: hidden;
+	margin: 5rem 0;
+	padding: 0 5rem;
+	height: 18rem;
+	width: 80%;
+}
+
+.connect__image--container--dark {
+	background: $component-background2;
+}
+
+.connect__image {
+	width: 10rem;
+	cursor: pointer;
+	transition: all 0.3s;
+
+	&:hover {
+		transform: scale(1.05);
+		-webkit-filter: $image-shadow1;
+	}
+}
+
+.connect__image--dark {
+	&:hover {
+		-webkit-filter: $image-shadow2;
+	}
+}
+
+.connect__title {
+	font-size: 3.438rem;
+	text-align: flex-start;
+	margin: 5rem 0;
+	width: 80%;
+}
+
+.connect__form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 60%;
+	font-size: 1.125rem;
+	text-align: center;
+}
+
+.connect__input {
+	background-color: $input-background;
+	border: $border1;
+	border-radius: 1rem;
+	box-shadow: $box-shadow1;
+	backdrop-filter: blur(2rem);
+	font-size: 1.125rem;
+	padding: 2rem;
+	margin: 1rem 0;
+	width: 100%;
+
+	&:focus {
+		outline: solid 0.18rem $color-cold2;
+	}
+}
+
+.connect__input::-webkit-input-placeholder {
+	color: $color-dark;
+}
+
+.connect__input--dark::-webkit-input-placeholder {
+	color: $color-light;
+}
+
+.connect__input--dark {
+	color: $color-light;
+}
+
+.connect__name {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.input__name {
+	width: 49%;
+}
+
+.connect__message--success {
+	font-size: 2.6rem;
+	background: $text-gradient1;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	margin: 10rem 0;
+}
+
+.swiper {
+	width: 95%;
+}
+
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-button-next {
+	color: $color-dark;
+}
+
+.swiper-button-prev {
+	color: $color-dark;
+}
+
+@media (max-width: 950px) {
+	.connect__title {
+		font-size: 3.2rem;
+	}
+
+	.connect__image--container {
+		padding: 0 1rem;
+	}
+
+	.connect__image {
+		height: 8rem;
+		width: 8rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.connect__title {
+		text-align: center;
+		font-size: 2.8rem;
+	}
+
+	.connect__image {
+		height: 4rem;
+		width: 4rem;
+	}
+
+	.connect__name {
+		flex-direction: column;
+	}
+
+	.input__name {
+		width: 100%;
+	}
+
+	.swiper {
+		width: 95%;
+	}
+}
+
+.connect__checkbox {
+	margin: 1rem;
+	margin-top: 3rem;
+	opacity: 0.5;
+}

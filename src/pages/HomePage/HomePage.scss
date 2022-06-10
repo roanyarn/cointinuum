@@ -1,0 +1,73 @@
+@import '../../index.scss';
+
+.homepage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: $background1;
+	padding-top: 12rem;
+	padding-bottom: 5rem;
+	width: 100vw;
+}
+
+.homepage__dark {
+	background: $background3;
+	color: $color-light;
+}
+
+.homepage__possibilities {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: $component-background1;
+	border: $border1;
+	box-shadow: $box-shadow1;
+	border-radius: 5rem;
+	width: 80%;
+	margin: 4rem 0;
+}
+
+.homepage__possibilities--title {
+	font-size: 3.468rem;
+	margin-top: 5rem;
+	margin-bottom: 2rem;
+	font-weight: 600;
+	line-height: 4.5rem;
+	text-align: center;
+}
+
+.homepage__possibilities--paragraph {
+	font-size: 1.75rem;
+	text-align: center;
+	width: 80%;
+	font-weight: 300;
+	line-height: 2.813rem;
+}
+
+.homepage__buttons {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.possibilities__card--container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.homepage__logoImage {
+	width: 25%;
+	-webkit-filter: $image-shadow1;
+	animation: rotation 10s infinite linear;
+
+	@keyframes rotation {
+		from {
+			-webkit-transform: rotate(0deg);
+		}
+		to {
+			-webkit-transform: rotate(-359deg);
+		}
+	}
+}
