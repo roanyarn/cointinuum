@@ -16,7 +16,7 @@ const socialMediaData = [
 	{
 		id: 2,
 		name: 'Discord',
-		url: 'https://discord.com/channels/893523482221101066/893523498939588631',
+		url: 'https://discord.gg/YcX34rvYyD',
 		image: Discord,
 	},
 	{
