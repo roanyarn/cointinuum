@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cointinuum/static/css/main.972dd8a8.css",
-    "main.js": "/cointinuum/static/js/main.0a3a0c72.js",
+    "main.js": "/cointinuum/static/js/main.00bdee55.js",
     "static/media/final.mp4": "/cointinuum/static/media/final.4e1454053c7c6097ca34.mp4",
     "static/media/animatedcommunity.png": "/cointinuum/static/media/animatedcommunity.183584c1c8a2a958872c.png",
     "static/media/animatedstability.png": "/cointinuum/static/media/animatedstability.22022d2dfdaf27987000.png",
@@ -11,7 +11,7 @@
     "static/media/Chris.jpg": "/cointinuum/static/media/Chris.8b4f7346b90d12d28840.jpg",
     "static/media/Akhil.jpeg": "/cointinuum/static/media/Akhil.d566482a84d178437d13.jpeg",
     "static/media/Mary.jpeg": "/cointinuum/static/media/Mary.70a5864b3f8ee8d3d7ff.jpeg",
-    "static/media/whitepaper.pdf": "/cointinuum/static/media/whitepaper.0eb7e2f3e66d4743e2ab.pdf",
+    "static/media/whitepaper.pdf": "/cointinuum/static/media/whitepaper.43f291e4bc8f350a27d1.pdf",
     "static/media/Jasmine.JPG": "/cointinuum/static/media/Jasmine.0a30b86239690ef58552.JPG",
     "static/media/Mia.jpg": "/cointinuum/static/media/Mia.f294ab5fc7920296971e.jpg",
     "static/media/Roan.JPG": "/cointinuum/static/media/Roan.1bd0246828093f96b775.JPG",
@@ -55,10 +55,10 @@
     "static/media/linkedIn.png": "/cointinuum/static/media/linkedIn.68ac41e1459436bfd38f.png",
     "index.html": "/cointinuum/index.html",
     "main.972dd8a8.css.map": "/cointinuum/static/css/main.972dd8a8.css.map",
-    "main.0a3a0c72.js.map": "/cointinuum/static/js/main.0a3a0c72.js.map"
+    "main.00bdee55.js.map": "/cointinuum/static/js/main.00bdee55.js.map"
   },
   "entrypoints": [
     "static/css/main.972dd8a8.css",
-    "static/js/main.0a3a0c72.js"
+    "static/js/main.00bdee55.js"
   ]
 }
