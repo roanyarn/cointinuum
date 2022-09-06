@@ -1,0 +1,41 @@
+@import '../../index.scss';
+
+.podcastCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 3rem;
+  margin: 3rem 1rem 5rem 1rem;
+  width: 30rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.01);
+    -webkit-filter: $image-shadow1;
+  }
+}
+
+.podcastCard--dark {
+  &:hover {
+    -webkit-filter: $image-shadow2;
+  }
+}
+
+.podcastCard__image {
+  border-radius: 3rem;
+  min-height: 30rem;
+  width: 30rem;
+  margin-bottom: 2rem;
+}
+
+.podcastCard__title {
+  color: $color-cold2;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  max-width: 32rem;
+  text-align: center;
+}
+
+.podcastCard__title--dark {
+  color: $color-light;
+}
