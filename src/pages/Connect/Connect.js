@@ -8,6 +8,7 @@ import Button from '../../components/Button/Button';
 import BlogCard from '../../components/BlogCard/BlogCard';
 import blogData from '../../data/blogData';
 import eventsData from '../../data/eventsData';
+import podcastData from '../../data/podcastData';
 import socialMediaData from '../../data/socialMediaData';
 import emailjs from 'emailjs-com';
 
@@ -18,6 +19,7 @@ import 'swiper/scss/navigation';
 import './Connect.scss';
 import useValidation from '../../hooks/useValidation';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+import PodcastCard from '../../components/PodcastCard/PodcastCard';
 
 const Connect = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -213,6 +215,49 @@ const Connect = () => {
                   title={title}
                   paragraph={paragraph}
                   date={date}
+                  image={image}
+                  onClick={() => onBlogClick(url)}
+                />
+              </SwiperSlide>
+            );
+          })}
+      </Swiper>
+      <h1 className="connect__title">Cointinuum Podcast</h1>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={10}
+        navigation={true}
+        pagination={{ clickable: true }}
+        breakpoints={{
+          310: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          650: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1100: {
+            slidesPerView: 3,
+            spaceBetween: -115,
+          },
+          1600: {
+            slidesPerView: 4,
+            spaceBetween: -115,
+          },
+        }}
+        modules={[Navigation, Pagination]}
+        className="mySwiper"
+      >
+        {podcastData
+          .reverse()
+          .map(({ id, title, subject, date, image, url }) => {
+            return (
+              <SwiperSlide>
+                <PodcastCard
+                  key={id}
+                  title={title}
+                  subject={subject}
                   image={image}
                   onClick={() => onBlogClick(url)}
                 />
