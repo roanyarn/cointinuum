@@ -1,0 +1,39 @@
+@import '../../index.scss';
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $background1;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login--dark {
+  background: $background3;
+  color: $color-light;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 4rem;
+  width: 80%;
+  height: 90%;
+}
+
+.label {
+  align-self: flex-start;
+  color: $color-cold2;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 2rem;
+  margin-top: 1.8rem;
+  margin-bottom: -1rem;
+}
+
+.label--dark {
+  color: $color-warm2;
+}
