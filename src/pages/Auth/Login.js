@@ -10,7 +10,6 @@ import './Login.scss';
 
 const Login = () => {
   const { darkMode } = useContext(DarkModeContext);
-  const [token, setToken] = useState('');
 
   const EMAIL_MAX_SIZE = 50;
   const EMAIL_MIN_SIZE = 9;
