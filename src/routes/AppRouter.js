@@ -7,6 +7,7 @@ import Connect from '../pages/Connect/Connect';
 import Invest from '../pages/Invest/Invest';
 import FAQ from '../pages/FAQ/FAQ';
 import Login from '../pages/Auth/Login';
+import Register from '../pages/Auth/Register';
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter = () => {
           <Route path="/connect" element={<Connect />} />
           <Route path="/FAQ" element={<FAQ />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Layout>
     </HashRouter>
