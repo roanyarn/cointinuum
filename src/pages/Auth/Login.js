@@ -24,7 +24,7 @@ const Login = () => {
                 : 'connect__input'
             }
             type="text"
-            placeholder="Enter email"
+            placeholder="Enter your email"
           />
           <label className={darkMode ? 'label label--dark' : 'label'}>
             Password
@@ -36,7 +36,7 @@ const Login = () => {
                 : 'connect__input'
             }
             type="text"
-            placeholder="Enter password"
+            placeholder="Enter your password"
           />
           <Button
             className={darkMode ? 'btn__secondary' : 'btn__primary'}
