@@ -52,8 +52,8 @@ const Register = () => {
           />
           <Button
             className={darkMode ? 'btn__secondary' : 'btn__primary'}
-            content="Login"
-            content2="Login"
+            content="Register"
+            content2="Register"
             type="submit"
           />
         </form>
