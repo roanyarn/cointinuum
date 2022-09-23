@@ -7,9 +7,11 @@ import AuthCard from '../../components/AuthCard/AuthCard';
 import Button from '../../components/Button/Button';
 
 import './Login.scss';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const { darkMode } = useContext(DarkModeContext);
+  const navigate = useNavigate();
 
   const EMAIL_MAX_SIZE = 50;
   const EMAIL_MIN_SIZE = 9;
@@ -45,8 +47,8 @@ const Login = () => {
     }
     if (!(emailError || passwordError)) {
       services.Auth.loginUser({ email, password }).then((obj) => {
-        console.log(obj);
         localStorage.setItem('token', JSON.stringify(obj.token));
+        navigate('/');
       });
     }
   };

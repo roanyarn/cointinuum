@@ -7,9 +7,11 @@ import Button from '../../components/Button/Button';
 
 import './Login.scss';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const { darkMode } = useContext(DarkModeContext);
+  const navigate = useNavigate();
 
   const NAME_MAX_SIZE = 50;
   const NAME_MIN_SIZE = 2;
@@ -57,8 +59,8 @@ const Register = () => {
     }
     if (!(nameError || emailError || passwordError)) {
       services.Auth.createUser({ name, email, password }).then((obj) => {
-        console.log(obj);
         localStorage.setItem('token', JSON.stringify(obj.token));
+        navigate('/');
       });
     }
   };
