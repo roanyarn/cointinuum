@@ -1,0 +1,19 @@
+@import '../../index.scss';
+
+.auth__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $component-background1;
+  backdrop-filter: blur(2rem);
+  border: $border1;
+  border-radius: 3rem;
+  box-shadow: $box-shadow1;
+  height: 40rem;
+  width: 50%;
+}
+
+.auth__card--dark {
+  background: $component-background2;
+  box-shadow: $box-shadow2;
+}
