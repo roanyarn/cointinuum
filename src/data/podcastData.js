@@ -4,7 +4,7 @@ const podcastData = [
   {
     id: '1',
     title: 'Episode 1',
-    subject: 'Satoshi Noobie',
+    subject: 'Coming soon!!!',
     image: Episode1,
     url: 'https://cointinuum.medium.com/how-to-choose-a-cryptocurrency-to-invest-297546a4d523',
   },
