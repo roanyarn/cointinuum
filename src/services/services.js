@@ -1,14 +1,21 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:5000/api/';
+const token = localStorage.getItem('token');
+
+const axiosInstance = axios.create({
+  baseURL: process.env.REACT_APP_API_URL,
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+});
 
 const responseBody = (response) => response.data;
 
 const requests = {
-  get: (url) => axios.get(url).then(responseBody),
-  post: (url, body) => axios.post(url, body).then(responseBody),
-  put: (url, body) => axios.put(url, body).then(responseBody),
-  delete: (url) => axios.delete(url).then(responseBody),
+  get: (url) => axiosInstance.get(url).then(responseBody),
+  post: (url, body) => axiosInstance.post(url, body).then(responseBody),
+  put: (url, body) => axiosInstance.put(url, body).then(responseBody),
+  delete: (url) => axiosInstance.delete(url).then(responseBody),
 };
 
 const Auth = {
