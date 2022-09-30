@@ -1,0 +1,35 @@
+@import '../../index.scss';
+
+.teammate__card {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  background: $card-background1;
+  border: $border1;
+  border-radius: 5rem;
+  box-shadow: $box-shadow1;
+  width: 80%;
+  max-width: 130rem;
+  height: 70rem;
+}
+
+.teammate__card--dark {
+  background: $card-background2;
+}
+
+.teammate__form {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+
+.teammate__buttons {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
