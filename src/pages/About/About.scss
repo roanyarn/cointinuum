@@ -1,35 +1,44 @@
 @import '../../index.scss';
 
 .about {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: $background2;
-	padding-top: 12rem;
-	padding-bottom: 5rem;
-	width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $background2;
+  padding-top: 12rem;
+  padding-bottom: 5rem;
+  width: 100vw;
 }
 
 .about__dark {
-	background: $background3;
-	color: $color-light;
+  background: $background3;
+  color: $color-light;
 }
 
 .about__founder {
-	height: 65vh;
-	display: flex;
-	flex-wrap: wrap;
-	padding-top: 9rem;
+  height: 65vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 9rem;
 }
 
 .about__team--cards {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .about__diversity {
-	width: 80%;
-	border-radius: 3rem;
-	box-shadow: $box-shadow1;
+  width: 80%;
+  border-radius: 3rem;
+  box-shadow: $box-shadow1;
+}
+
+.team__title--container {
+  display: flex;
+  width: 100%;
+}
+
+.addTeam__btn {
+  font-size: 2rem;
 }
