@@ -4,6 +4,7 @@ import { DarkModeContext } from '../../Context/DarkModeContext';
 import useValidation from '../../hooks/useValidation';
 import services from '../../services/services';
 import Button from '../Button/Button';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 import './Teammate.scss';
 
@@ -43,7 +44,7 @@ const Teammate = ({ onCloseModal }) => {
     fieldName: 'image',
     minSize: URL_MIN_SIZE,
     maxSize: URL_MAX_SIZE,
-    type: 'letters',
+    type: 'all',
     required: true,
   });
 
@@ -52,7 +53,7 @@ const Teammate = ({ onCloseModal }) => {
       fieldName: 'linkedIn',
       minSize: URL_MIN_SIZE,
       maxSize: URL_MAX_SIZE,
-      type: 'letters',
+      type: 'all',
       required: true,
     });
 
@@ -65,7 +66,7 @@ const Teammate = ({ onCloseModal }) => {
     fieldName: 'description',
     minSize: DESCRIPTION_MIN_SIZE,
     maxSize: DESCRIPTION_MAX_SIZE,
-    type: 'letters',
+    type: 'all',
     required: true,
   });
 
@@ -73,7 +74,7 @@ const Teammate = ({ onCloseModal }) => {
     fieldName: 'quote',
     minSize: QUOTE_MIN_SIZE,
     maxSize: QUOTE_MAX_SIZE,
-    type: 'letters',
+    type: 'all',
     required: true,
   });
 
@@ -113,137 +114,131 @@ const Teammate = ({ onCloseModal }) => {
         description,
         quote,
       });
-      navigate('/about');
+      // navigate('/about');
     }
   };
 
   return (
     <div className="biography">
       <form
+        onSubmit={handleTeammateSubmit}
         className={
           darkMode ? 'teammate__card teammate__card--dark' : 'teammate__card'
         }
       >
-        <div className="teammate__form">
-          <label className={darkMode ? 'label label--dark' : 'label'}>
-            Name
-          </label>
-          <input
-            className={
-              darkMode
-                ? 'connect__input connect__input--dark'
-                : 'connect__input'
-            }
-            name="name"
-            type="text"
-            placeholder="Enter teammate name"
-            value={name}
-            onBlur={handleNameError}
-            onChange={onNameChange}
-          />
-          <label className={darkMode ? 'label label--dark' : 'label'}>
-            Position
-          </label>
-          <input
-            className={
-              darkMode
-                ? 'connect__input connect__input--dark'
-                : 'connect__input'
-            }
-            name="position"
-            type="text"
-            placeholder="Enter teammate position"
-            value={position}
-            onBlur={handlePositionError}
-            onChange={onPositionChange}
-          />
-          <label className={darkMode ? 'label label--dark' : 'label'}>
-            Image
-          </label>
-          <input
-            className={
-              darkMode
-                ? 'connect__input connect__input--dark'
-                : 'connect__input'
-            }
-            name="image"
-            type="text"
-            placeholder="Enter image URL"
-            value={image}
-            onBlur={handleImageError}
-            onChange={onImageChange}
-          />
-          <label className={darkMode ? 'label label--dark' : 'label'}>
-            LinkedIn
-          </label>
-          <input
-            className={
-              darkMode
-                ? 'connect__input connect__input--dark'
-                : 'connect__input'
-            }
-            name="linkedIn"
-            type="text"
-            placeholder="Enter LinkedIn URL"
-            value={linkedIn}
-            onBlur={handleLinkedInError}
-            onChange={onLinkedInChange}
-          />
-          <label className={darkMode ? 'label label--dark' : 'label'}>
-            Description
-          </label>
-          <textarea
-            className={
-              darkMode
-                ? 'connect__input connect__input--dark'
-                : 'connect__input'
-            }
-            name="description"
-            type="text"
-            placeholder="Enter teammate description"
-            value={description}
-            onBlur={handleDescriptionError}
-            onChange={onDescriptionChange}
-          />
-          <label className={darkMode ? 'label label--dark' : 'label'}>
-            Quote
-          </label>
-          <textarea
-            className={
-              darkMode
-                ? 'connect__input connect__input--dark'
-                : 'connect__input'
-            }
-            name="quote"
-            type="text"
-            placeholder="Enter teammate favorite quote"
-            value={quote}
-            onBlur={handleQuoteError}
-            onChange={onQuoteChange}
-          />
-        </div>
-        <div className="teammate__buttons">
-          <Button
-            className={
-              darkMode
-                ? 'btn__primary btn__primary--dark addTeam__btn'
-                : 'btn__primary addTeam__btn'
-            }
-            content="save"
-            content2="save"
-            onSubmit={handleTeammateSubmit}
-          />
-          <Button
-            className={
-              darkMode
-                ? 'btn__secondary btn__secondary--dark addTeam__btn'
-                : 'btn__secondary addTeam__btn'
-            }
-            content="cancel"
-            content2="cancel"
-            onClick={onCloseModal}
-          />
-        </div>
+        {/* <div className="teammate__form"> */}
+        <label className={darkMode ? 'label label--dark' : 'label'}>Name</label>
+        <input
+          className={
+            darkMode ? 'connect__input connect__input--dark' : 'connect__input'
+          }
+          name="name"
+          type="text"
+          placeholder="Enter teammate name"
+          value={name}
+          onBlur={handleNameError}
+          onChange={onNameChange}
+        />
+        {nameError && <ErrorMessage>{nameError}</ErrorMessage>}
+        <label className={darkMode ? 'label label--dark' : 'label'}>
+          Position
+        </label>
+        <input
+          className={
+            darkMode ? 'connect__input connect__input--dark' : 'connect__input'
+          }
+          name="position"
+          type="text"
+          placeholder="Enter teammate position"
+          value={position}
+          onBlur={handlePositionError}
+          onChange={onPositionChange}
+        />
+        {positionError && <ErrorMessage>{positionError}</ErrorMessage>}
+        <label className={darkMode ? 'label label--dark' : 'label'}>
+          Image
+        </label>
+        <input
+          className={
+            darkMode ? 'connect__input connect__input--dark' : 'connect__input'
+          }
+          name="image"
+          type="text"
+          placeholder="Enter image URL"
+          value={image}
+          onBlur={handleImageError}
+          onChange={onImageChange}
+        />
+        {imageError && <ErrorMessage>{imageError}</ErrorMessage>}
+        <label className={darkMode ? 'label label--dark' : 'label'}>
+          LinkedIn
+        </label>
+        <input
+          className={
+            darkMode ? 'connect__input connect__input--dark' : 'connect__input'
+          }
+          name="linkedIn"
+          type="text"
+          placeholder="Enter LinkedIn URL"
+          value={linkedIn}
+          onBlur={handleLinkedInError}
+          onChange={onLinkedInChange}
+        />
+        {linkedInError && <ErrorMessage>{linkedInError}</ErrorMessage>}
+        <label className={darkMode ? 'label label--dark' : 'label'}>
+          Description
+        </label>
+        <textarea
+          className={
+            darkMode ? 'connect__input connect__input--dark' : 'connect__input'
+          }
+          name="description"
+          type="text"
+          placeholder="Enter teammate description"
+          value={description}
+          onBlur={handleDescriptionError}
+          onChange={onDescriptionChange}
+        />
+        {descriptionError && <ErrorMessage>{descriptionError}</ErrorMessage>}
+        <label className={darkMode ? 'label label--dark' : 'label'}>
+          Quote
+        </label>
+        <textarea
+          className={
+            darkMode ? 'connect__input connect__input--dark' : 'connect__input'
+          }
+          name="quote"
+          type="text"
+          placeholder="Enter teammate favorite quote"
+          value={quote}
+          onBlur={handleQuoteError}
+          onChange={onQuoteChange}
+        />
+        {quoteError && <ErrorMessage>{quoteError}</ErrorMessage>}
+        {/* </div> */}
+        {/* <div className="teammate__buttons"> */}
+        <button type="submit">submit</button>
+        <Button
+          className={
+            darkMode
+              ? 'btn__primary btn__primary--dark addTeam__btn'
+              : 'btn__primary addTeam__btn'
+          }
+          content="save"
+          content2="save"
+          type="submit"
+        />
+        <Button
+          className={
+            darkMode
+              ? 'btn__secondary btn__secondary--dark addTeam__btn'
+              : 'btn__secondary addTeam__btn'
+          }
+          content="cancel"
+          content2="cancel"
+          onClick={onCloseModal}
+        />
+        {/* </div> */}
       </form>
     </div>
   );
