@@ -36,12 +36,12 @@ const Faq = {
   deleteFaq: (id) => requests.delete(`faqs/${id}`),
 };
 
-const Partner = {
-  getAllPartners: () => requests.get('partners'),
-  getPartnerById: (id) => requests.get(`partners/${id}`),
-  createPartner: (body) => requests.post('partners', body),
-  updatePartner: (id, body) => requests.put(`partners/${id}`, body),
-  deletePartner: (id) => requests.delete(`partners/${id}`),
+const Teammate = {
+  getAllTeammates: () => requests.get('team'),
+  getTeammateById: (id) => requests.get(`team/${id}`),
+  createTeammate: (body) => requests.post('team', body),
+  updateTeammate: (id, body) => requests.put(`team/${id}`, body),
+  deleteTeammate: (id) => requests.delete(`team/${id}`),
 };
 
 const Podcast = {
@@ -56,7 +56,7 @@ const service = {
   Blog,
   Event,
   Faq,
-  Partner,
+  Teammate,
   Podcast,
 };
 
