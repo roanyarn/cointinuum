@@ -106,7 +106,7 @@ const Teammate = ({ onCloseModal }) => {
         quoteError
       )
     ) {
-      services.Partner.createPartner({
+      services.Teammate.createTeammate({
         name,
         position,
         image,
