@@ -108,15 +108,20 @@
 }
 
 .btn--add {
-  grid-column-start: 4;
+  justify-self: center;
+  grid-column-start: 5;
   grid-column-end: 8;
   grid-row-start: 18;
   grid-row-end: 19;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .btn--close {
+  justify-self: center;
   grid-column-start: 11;
   grid-column-end: 15;
   grid-row-start: 18;
   grid-row-end: 19;
+  margin-top: 2rem;
 }

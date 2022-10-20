@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { DarkModeContext } from '../../Context/DarkModeContext';
 import useValidation from '../../hooks/useValidation';
 import services from '../../services/services';
-import Button from '../Button/Button';
+import CommonButton from '../CommonButton/CommonButton';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 
 import './Teammate.scss';
@@ -259,26 +259,15 @@ const Teammate = ({ onCloseModal }) => {
         {quoteError && <ErrorMessage>{quoteError}</ErrorMessage>}
         {/* </div> */}
         {/* <div className="teammate__buttons"> */}
-        <Button
-          className={
-            darkMode
-              ? 'btn__primary btn__primary--dark btn--add'
-              : 'btn__primary btn--add'
-          }
-          content="save"
-          content2="save"
-          type="submit"
-        />
-        <Button
-          className={
-            darkMode
-              ? 'btn__secondary btn__secondary--dark btn--close'
-              : 'btn__secondary btn--close'
-          }
-          content="cancel"
-          content2="cancel"
+        <CommonButton className="common__btn--primary btn--add" type="submit">
+          Save
+        </CommonButton>
+        <CommonButton
+          className="common__btn--secondary btn--close"
           onClick={onCloseModal}
-        />
+        >
+          Cancel
+        </CommonButton>
         {/* </div> */}
       </form>
     </div>
