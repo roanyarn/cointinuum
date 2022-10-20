@@ -230,11 +230,12 @@
 .login__container {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
-  grid-column-start: 1;
-  grid-column-end: 18;
+  justify-content: space-around;
+  grid-column-start: 13;
+  grid-column-end: 17;
   grid-row-start: 8;
   grid-row-end: 9;
+  margin-bottom: 1.5rem;
 }
 
 .btn__login {

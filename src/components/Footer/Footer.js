@@ -17,7 +17,7 @@ import Legal from '../../Documents/legal.pdf';
 import useValidation from '../../hooks/useValidation';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import Rarible from '../../images/socialMedia/Rarible-white.png';
-import Button from '../Button/Button';
+import CommonButton from '../CommonButton/CommonButton';
 
 import './Footer.scss';
 
@@ -358,18 +358,18 @@ const Footer = () => {
       </p>
       {token ? (
         <div className="login__container">
-          <Button
-            className="btn__secondary"
-            content="Register"
-            content2="Register"
+          <CommonButton
+            className="common__btn--primary"
             onClick={onRegisterClick}
-          />
-          <Button
-            className="btn__primary"
-            content="Logout"
-            content2="Logout"
+          >
+            Register
+          </CommonButton>
+          <CommonButton
+            className="common__btn--secondary"
             onClick={onLogoutClick}
-          />
+          >
+            Logout
+          </CommonButton>
         </div>
       ) : (
         <button className="btn__login" onClick={onLoginClick}></button>
