@@ -1,0 +1,27 @@
+@import '../../index.scss';
+
+.common__btn--primary {
+  background: $color-cold3;
+  border: none;
+  border-radius: 2rem;
+  color: $color-light;
+  font-size: 2.4rem;
+  padding: 0 2rem;
+  max-height: 4rem;
+  max-width: 20rem;
+  min-width: 15rem;
+  cursor: pointer;
+}
+
+.common__btn--secondary {
+  background: $color-warm1;
+  border: none;
+  border-radius: 2rem;
+  color: $color-light;
+  font-size: 2.4rem;
+  padding: 0 2rem;
+  max-height: 4rem;
+  max-width: 20rem;
+  min-width: 15rem;
+  cursor: pointer;
+}
