@@ -12,6 +12,7 @@ import Equity from '../../images/about/equity.png';
 import Sustain from '../../images/about/sustainability.png';
 import Diversity from '../../images/about/Diversity1.jpeg';
 import './About.scss';
+import CommonButton from '../../components/CommonButton/CommonButton';
 
 const About = () => {
   const token = localStorage.getItem('token');
@@ -137,16 +138,12 @@ const About = () => {
       {token ? (
         <div className="team__title--container">
           <Title title="Meet the Team" />
-          <Button
-            className={
-              darkMode
-                ? 'btn__secondary btn__secondary--dark addTeam__btn'
-                : 'btn__secondary addTeam__btn'
-            }
-            content="add new"
-            content2="add new"
+          <CommonButton
+            className="common__btn--primary"
             onClick={addNewTeammate}
-          />
+          >
+            Add new
+          </CommonButton>
         </div>
       ) : (
         <Title title="Meet the Team" />
