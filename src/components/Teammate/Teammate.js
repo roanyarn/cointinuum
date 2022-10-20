@@ -114,7 +114,7 @@ const Teammate = ({ onCloseModal }) => {
         description,
         quote,
       });
-      // navigate('/about');
+      onCloseModal();
     }
   };
 
@@ -127,10 +127,18 @@ const Teammate = ({ onCloseModal }) => {
         }
       >
         {/* <div className="teammate__form"> */}
-        <label className={darkMode ? 'label label--dark' : 'label'}>Name</label>
+        <label
+          className={
+            darkMode ? 'label label--name label--dark' : 'label label--name'
+          }
+        >
+          Name
+        </label>
         <input
           className={
-            darkMode ? 'connect__input connect__input--dark' : 'connect__input'
+            darkMode
+              ? 'connect__input input--name connect__input--dark'
+              : 'connect__input input--name'
           }
           name="name"
           type="text"
@@ -140,12 +148,20 @@ const Teammate = ({ onCloseModal }) => {
           onChange={onNameChange}
         />
         {nameError && <ErrorMessage>{nameError}</ErrorMessage>}
-        <label className={darkMode ? 'label label--dark' : 'label'}>
+        <label
+          className={
+            darkMode
+              ? 'label label--position label--dark'
+              : 'label label--position'
+          }
+        >
           Position
         </label>
         <input
           className={
-            darkMode ? 'connect__input connect__input--dark' : 'connect__input'
+            darkMode
+              ? 'connect__input input--position connect__input--dark'
+              : 'connect__input input--position'
           }
           name="position"
           type="text"
@@ -155,12 +171,18 @@ const Teammate = ({ onCloseModal }) => {
           onChange={onPositionChange}
         />
         {positionError && <ErrorMessage>{positionError}</ErrorMessage>}
-        <label className={darkMode ? 'label label--dark' : 'label'}>
+        <label
+          className={
+            darkMode ? 'label label--image label--dark' : 'label label--image'
+          }
+        >
           Image
         </label>
         <input
           className={
-            darkMode ? 'connect__input connect__input--dark' : 'connect__input'
+            darkMode
+              ? 'connect__input input--image connect__input--dark'
+              : 'connect__input input--image'
           }
           name="image"
           type="text"
@@ -170,12 +192,20 @@ const Teammate = ({ onCloseModal }) => {
           onChange={onImageChange}
         />
         {imageError && <ErrorMessage>{imageError}</ErrorMessage>}
-        <label className={darkMode ? 'label label--dark' : 'label'}>
+        <label
+          className={
+            darkMode
+              ? 'label label--linkedin label--dark'
+              : 'label label--linkedin'
+          }
+        >
           LinkedIn
         </label>
         <input
           className={
-            darkMode ? 'connect__input connect__input--dark' : 'connect__input'
+            darkMode
+              ? 'connect__input input--linkedin connect__input--dark'
+              : 'connect__input input--linkedin'
           }
           name="linkedIn"
           type="text"
@@ -185,27 +215,39 @@ const Teammate = ({ onCloseModal }) => {
           onChange={onLinkedInChange}
         />
         {linkedInError && <ErrorMessage>{linkedInError}</ErrorMessage>}
-        <label className={darkMode ? 'label label--dark' : 'label'}>
-          Description
+        <label
+          className={
+            darkMode ? 'label label--bio label--dark' : 'label label--bio'
+          }
+        >
+          Biography
         </label>
         <textarea
           className={
-            darkMode ? 'connect__input connect__input--dark' : 'connect__input'
+            darkMode
+              ? 'connect__input input--bio connect__input--dark'
+              : 'connect__input input--bio'
           }
           name="description"
           type="text"
-          placeholder="Enter teammate description"
+          placeholder="Enter teammate biography"
           value={description}
           onBlur={handleDescriptionError}
           onChange={onDescriptionChange}
         />
         {descriptionError && <ErrorMessage>{descriptionError}</ErrorMessage>}
-        <label className={darkMode ? 'label label--dark' : 'label'}>
+        <label
+          className={
+            darkMode ? 'label label--quote label--dark' : 'label label--quote'
+          }
+        >
           Quote
         </label>
         <textarea
           className={
-            darkMode ? 'connect__input connect__input--dark' : 'connect__input'
+            darkMode
+              ? 'connect__input input--quote connect__input--dark'
+              : 'connect__input input--quote'
           }
           name="quote"
           type="text"
@@ -217,12 +259,11 @@ const Teammate = ({ onCloseModal }) => {
         {quoteError && <ErrorMessage>{quoteError}</ErrorMessage>}
         {/* </div> */}
         {/* <div className="teammate__buttons"> */}
-        <button type="submit">submit</button>
         <Button
           className={
             darkMode
-              ? 'btn__primary btn__primary--dark addTeam__btn'
-              : 'btn__primary addTeam__btn'
+              ? 'btn__primary btn__primary--dark btn--add'
+              : 'btn__primary btn--add'
           }
           content="save"
           content2="save"
@@ -231,8 +272,8 @@ const Teammate = ({ onCloseModal }) => {
         <Button
           className={
             darkMode
-              ? 'btn__secondary btn__secondary--dark addTeam__btn'
-              : 'btn__secondary addTeam__btn'
+              ? 'btn__secondary btn__secondary--dark btn--close'
+              : 'btn__secondary btn--close'
           }
           content="cancel"
           content2="cancel"
