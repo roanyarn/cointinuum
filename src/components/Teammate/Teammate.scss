@@ -2,34 +2,121 @@
 
 .teammate__card {
   display: grid;
-  align-items: center;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(17, 1fr);
+  grid-template-rows: repeat(18, 1fr);
   background: $card-background1;
   border: $border1;
   border-radius: 5rem;
   box-shadow: $box-shadow1;
+  height: 70rem;
   width: 80%;
   max-width: 130rem;
-  height: 70rem;
 }
 
 .teammate__card--dark {
   background: $card-background2;
 }
 
-.teammate__form {
-  display: flex;
-  flex-direction: column;
+.label--name {
+  align-self: flex-end;
   grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.input--name {
+  grid-column-start: 2;
+  grid-column-end: 9;
   grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.label--position {
+  align-self: flex-end;
+  grid-column-start: 10;
+  grid-column-end: 12;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.input--position {
+  grid-column-start: 10;
+  grid-column-end: 17;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.label--image {
+  align-self: flex-end;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
   grid-row-end: 5;
 }
 
-.teammate__buttons {
-  grid-column-start: 7;
+.input--image {
+  grid-column-start: 2;
   grid-column-end: 9;
-  grid-row-start: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.label--linkedin {
+  align-self: flex-end;
+  grid-column-start: 10;
+  grid-column-end: 12;
+  grid-row-start: 4;
   grid-row-end: 5;
+}
+
+.input--linkedin {
+  grid-column-start: 10;
+  grid-column-end: 17;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.label--bio {
+  align-self: flex-end;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+.input--bio {
+  grid-column-start: 2;
+  grid-column-end: 17;
+  grid-row-start: 8;
+  grid-row-end: 12;
+}
+
+.label--quote {
+  align-self: flex-end;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 13;
+  grid-row-end: 14;
+}
+
+.input--quote {
+  grid-column-start: 2;
+  grid-column-end: 17;
+  grid-row-start: 14;
+  grid-row-end: 18;
+}
+
+.btn--add {
+  grid-column-start: 4;
+  grid-column-end: 8;
+  grid-row-start: 18;
+  grid-row-end: 19;
+}
+
+.btn--close {
+  grid-column-start: 11;
+  grid-column-end: 15;
+  grid-row-start: 18;
+  grid-row-end: 19;
 }
