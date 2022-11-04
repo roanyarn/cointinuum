@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { DarkModeContext } from '../../Context/DarkModeContext';
 import LargeCard from '../../components/LargeCard/LargeCard';
 import TeamCard from '../../components/TeamCard/TeamCard';
@@ -6,13 +6,13 @@ import Title from '../../components/Title/Title';
 import Button from '../../components/Button/Button';
 import Biography from '../../components/Biography/Biography';
 import Teammate from '../../components/Teammate/Teammate';
-import teamData from '../../data/teamData';
 import Founder from '../../images/about/MeetTheFounder.jpg';
 import Equity from '../../images/about/equity.png';
 import Sustain from '../../images/about/sustainability.png';
 import Diversity from '../../images/about/Diversity1.jpeg';
 import './About.scss';
 import CommonButton from '../../components/CommonButton/CommonButton';
+import service from '../../services/services';
 
 const About = () => {
   const token = localStorage.getItem('token');
@@ -20,6 +20,7 @@ const About = () => {
   const [biography, setBiography] = useState(false);
   const [teammate, setTeammate] = useState(false);
   const [teamBio, setTeamBio] = useState({});
+  const [teamData, setTeamData] = useState([]);
 
   const showBio = (
     id,
@@ -55,6 +56,14 @@ const About = () => {
   const onCloseModal = () => {
     setTeammate(false);
   };
+
+  const getTeam = () => {
+    service.Teammate.getAllTeammates().then(({ msg }) => setTeamData(msg));
+  };
+
+  useEffect(() => {
+    getTeam();
+  }, []);
 
   const windowWidth = window.innerWidth;
 
@@ -157,9 +166,9 @@ const About = () => {
       )}
       {teammate && <Teammate onCloseModal={onCloseModal} />}
       <div className="about__team--cards">
-        {teamData.map(
+        {teamData?.map(
           ({
-            id,
+            _id,
             name,
             position,
             image,
@@ -170,13 +179,14 @@ const About = () => {
           }) => {
             return (
               <TeamCard
-                key={id}
+                key={_id}
+                id={_id}
                 name={name}
                 position={position}
                 image={image}
                 onClick={() =>
                   showBio(
-                    id,
+                    _id,
                     name,
                     position,
                     image,
