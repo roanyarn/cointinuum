@@ -1,68 +1,81 @@
 @import '../../index.scss';
 
 .teamCard {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	margin: 2rem;
-	width: 28rem;
-	height: 45rem;
-	cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem;
+  width: 28rem;
+  height: 45rem;
+  cursor: pointer;
 }
 
 .teamCard__image {
-	backdrop-filter: blur(2rem);
-	border: $border1;
-	border-radius: 3rem;
-	box-shadow: $box-shadow1;
-	overflow: hidden;
-	object-fit: cover;
-	margin-bottom: 2rem;
-	height: 42rem;
-	width: 100%;
-	transition: all 0.3s;
+  backdrop-filter: blur(2rem);
+  border: $border1;
+  border-radius: 3rem;
+  box-shadow: $box-shadow1;
+  overflow: hidden;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  height: 42rem;
+  width: 100%;
+  transition: all 0.3s;
 
-	&:hover {
-		transform: scale(1.05);
-		box-shadow: $box-shadow4;
-	}
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: $box-shadow4;
+  }
 }
 
 .teamCard__image--dark {
-	box-shadow: none;
-	box-shadow: $box-shadow2;
+  box-shadow: none;
+  box-shadow: $box-shadow2;
 }
 
 .teamCard__info {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .teamCard__name {
-	font-weight: 400;
-	font-size: 2rem;
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 .teamCard__position {
-	font-weight: 300;
-	font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.teamCard__btn--container {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+
+.btn__team {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  height: 4rem;
 }
 
 @media (max-width: 650px) {
-	.teamCard {
-		width: 16rem;
-		height: 30rem;
-	}
+  .teamCard {
+    width: 16rem;
+    height: 30rem;
+  }
 
-	.teamCard__name {
-		font-size: 1.6rem;
-	}
+  .teamCard__name {
+    font-size: 1.6rem;
+  }
 
-	.teamCard__position {
-		font-size: 1.2rem;
-		text-align: center;
-	}
+  .teamCard__position {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
