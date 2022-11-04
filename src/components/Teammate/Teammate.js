@@ -1,5 +1,4 @@
-import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useContext, useState } from 'react';
 import { DarkModeContext } from '../../Context/DarkModeContext';
 import useValidation from '../../hooks/useValidation';
 import services from '../../services/services';
@@ -9,7 +8,6 @@ import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import './Teammate.scss';
 
 const Teammate = ({ onCloseModal }) => {
-  const navigate = useNavigate();
   const { darkMode } = useContext(DarkModeContext);
 
   const NAME_MAX_SIZE = 20;
@@ -40,14 +38,6 @@ const Teammate = ({ onCloseModal }) => {
       required: true,
     });
 
-  const [image, setImage, imageError, handleImageError] = useValidation({
-    fieldName: 'image',
-    minSize: URL_MIN_SIZE,
-    maxSize: URL_MAX_SIZE,
-    type: 'all',
-    required: true,
-  });
-
   const [linkedIn, setLinkedIn, linkedInError, handleLinkedInError] =
     useValidation({
       fieldName: 'linkedIn',
@@ -57,12 +47,7 @@ const Teammate = ({ onCloseModal }) => {
       required: true,
     });
 
-  const [
-    description,
-    setDescription,
-    descriptionError,
-    handleDescriptionError,
-  ] = useValidation({
+  const [bio, setBio, bioError, handleBioError] = useValidation({
     fieldName: 'description',
     minSize: DESCRIPTION_MIN_SIZE,
     maxSize: DESCRIPTION_MAX_SIZE,
@@ -78,42 +63,38 @@ const Teammate = ({ onCloseModal }) => {
     required: true,
   });
 
+  const [image, setImage] = useState('');
+
+  const formData = new FormData();
+  formData.append('name', name);
+  formData.append('position', position);
+  formData.append('linkedIn', linkedIn);
+  formData.append('bio', bio);
+  formData.append('quote', quote);
+  formData.append('image', image);
+  // console.log(image);
+
   const onNameChange = (e) => setName(e.target.value);
   const onPositionChange = (e) => setPosition(e.target.value);
-  const onImageChange = (e) => setImage(e.target.value);
   const onLinkedInChange = (e) => setLinkedIn(e.target.value);
-  const onDescriptionChange = (e) => setDescription(e.target.value);
+  const onBioChange = (e) => setBio(e.target.value);
   const onQuoteChange = (e) => setQuote(e.target.value);
+  const onImageChange = (e) => setImage(e.target.files[0]);
 
   const handleTeammateSubmit = (e) => {
     e.preventDefault();
-    if (!name || !position || !image || !linkedIn || !description || !quote) {
+    if (!name || !position || !image || !linkedIn || !bio || !quote) {
       handleNameError();
       handlePositionError();
-      handleImageError();
       handleLinkedInError();
-      handleDescriptionError();
+      handleBioError();
       handleQuoteError();
       return;
     }
     if (
-      !(
-        nameError ||
-        positionError ||
-        imageError ||
-        linkedInError ||
-        descriptionError ||
-        quoteError
-      )
+      !(nameError || positionError || linkedInError || bioError || quoteError)
     ) {
-      services.Teammate.createTeammate({
-        name,
-        position,
-        image,
-        linkedIn,
-        description,
-        quote,
-      });
+      services.Teammate.createTeammate(formData);
       onCloseModal();
     }
   };
@@ -126,7 +107,6 @@ const Teammate = ({ onCloseModal }) => {
           darkMode ? 'teammate__card teammate__card--dark' : 'teammate__card'
         }
       >
-        {/* <div className="teammate__form"> */}
         <label
           className={
             darkMode ? 'label label--name label--dark' : 'label label--name'
@@ -185,13 +165,9 @@ const Teammate = ({ onCloseModal }) => {
               : 'connect__input input--image'
           }
           name="image"
-          type="text"
-          placeholder="Enter image URL"
-          value={image}
-          onBlur={handleImageError}
+          type="file"
           onChange={onImageChange}
         />
-        {imageError && <ErrorMessage>{imageError}</ErrorMessage>}
         <label
           className={
             darkMode
@@ -228,14 +204,14 @@ const Teammate = ({ onCloseModal }) => {
               ? 'connect__input input--bio connect__input--dark'
               : 'connect__input input--bio'
           }
-          name="description"
+          name="bio"
           type="text"
           placeholder="Enter teammate biography"
-          value={description}
-          onBlur={handleDescriptionError}
-          onChange={onDescriptionChange}
+          value={bio}
+          onBlur={handleBioError}
+          onChange={onBioChange}
         />
-        {descriptionError && <ErrorMessage>{descriptionError}</ErrorMessage>}
+        {bioError && <ErrorMessage>{bioError}</ErrorMessage>}
         <label
           className={
             darkMode ? 'label label--quote label--dark' : 'label label--quote'
@@ -257,8 +233,6 @@ const Teammate = ({ onCloseModal }) => {
           onChange={onQuoteChange}
         />
         {quoteError && <ErrorMessage>{quoteError}</ErrorMessage>}
-        {/* </div> */}
-        {/* <div className="teammate__buttons"> */}
         <CommonButton className="common__btn--primary btn--add" type="submit">
           Save
         </CommonButton>
@@ -268,7 +242,6 @@ const Teammate = ({ onCloseModal }) => {
         >
           Cancel
         </CommonButton>
-        {/* </div> */}
       </form>
     </div>
   );
