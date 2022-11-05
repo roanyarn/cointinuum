@@ -10,16 +10,8 @@ const Biography = ({ onClick, teamBio, setBiography }) => {
   const { darkMode } = useContext(DarkModeContext);
   const domNode = useClickOutside(() => setBiography(false));
 
-  const {
-    id,
-    name,
-    position,
-    image,
-    linkedIn,
-    personalWeb,
-    description,
-    quote,
-  } = teamBio;
+  const { id, name, position, image, linkedIn, personalWeb, bio, quote } =
+    teamBio;
 
   return (
     <div className="biography">
@@ -57,7 +49,7 @@ const Biography = ({ onClick, teamBio, setBiography }) => {
             )}
           </div>
           <p className="biography__position">{position}</p>
-          <p className="biography__paragraph">{description}</p>
+          <p className="biography__paragraph">{bio}</p>
           <p className="biography__paragraph">{quote}</p>
         </div>
       </div>
