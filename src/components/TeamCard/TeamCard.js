@@ -6,6 +6,7 @@ import './TeamCard.scss';
 
 const TeamCard = ({ id, image, name, position, onClick }) => {
   const { darkMode } = useContext(DarkModeContext);
+  const token = localStorage.getItem('token');
   return (
     <div className="teamCard" onClick={onClick}>
       <img
@@ -19,14 +20,16 @@ const TeamCard = ({ id, image, name, position, onClick }) => {
         <h1 className="teamCard__name">{name}</h1>
         <h2 className="teamCard__position">{position}</h2>
       </div>
-      <div className="teamCard__btn--container">
-        <CommonButton className="common__btn--primary btn__team">
-          <MdEdit />
-        </CommonButton>
-        <CommonButton className="common__btn--secondary btn__team">
-          <MdDelete />
-        </CommonButton>
-      </div>
+      {token && (
+        <div className="teamCard__btn--container">
+          <CommonButton className="common__btn--primary btn__team">
+            <MdEdit />
+          </CommonButton>
+          <CommonButton className="common__btn--secondary btn__team">
+            <MdDelete />
+          </CommonButton>
+        </div>
+      )}
     </div>
   );
 };
