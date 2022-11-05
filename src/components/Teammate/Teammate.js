@@ -34,7 +34,7 @@ const Teammate = ({ onCloseModal }) => {
       fieldName: 'position',
       minSize: POSITION_MIN_SIZE,
       maxSize: POSITION_MAX_SIZE,
-      type: 'letters',
+      type: 'all',
       required: true,
     });
 
