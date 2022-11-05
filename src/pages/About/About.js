@@ -29,7 +29,7 @@ const About = () => {
     image,
     linkedIn,
     personalWeb,
-    description,
+    bio,
     quote
   ) => {
     setTeamBio({
@@ -39,7 +39,7 @@ const About = () => {
       image,
       linkedIn,
       personalWeb,
-      description,
+      bio,
       quote,
     });
     setBiography(!biography);
@@ -174,7 +174,7 @@ const About = () => {
             image,
             linkedIn,
             personalWeb,
-            description,
+            bio,
             quote,
           }) => {
             return (
@@ -192,7 +192,7 @@ const About = () => {
                     image,
                     linkedIn,
                     personalWeb,
-                    description,
+                    bio,
                     quote
                   )
                 }
