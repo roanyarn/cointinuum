@@ -9,14 +9,12 @@ import { BsTelegram } from 'react-icons/bs';
 import { GrInstagram } from 'react-icons/gr';
 import { BsLinkedin } from 'react-icons/bs';
 import { BsYoutube } from 'react-icons/bs';
-import Cointinuum from '../../images/logo/Wordmark.png';
 import emailjs from 'emailjs-com';
 import Privacy from '../../Documents/privacy.pdf';
 import Whitepaper from '../../Documents/whitepaper.pdf';
 import Legal from '../../Documents/legal.pdf';
 import useValidation from '../../hooks/useValidation';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
-import Rarible from '../../images/socialMedia/Rarible-white.png';
 import CommonButton from '../CommonButton/CommonButton';
 
 import './Footer.scss';
@@ -208,7 +206,11 @@ const Footer = () => {
 
   return (
     <div className={darkMode ? 'footer footer--dark' : 'footer'}>
-      <img className="footer__logo" src={Cointinuum} alt="cointinuum" />
+      <img
+        className="footer__logo"
+        src="https://res.cloudinary.com/dtzesssqo/image/upload/v1667671373/brand/Wordmark_pmnni3.png"
+        alt="cointinuum"
+      />
       {!isEmailSent ? (
         <div className="footer__email">
           <form className="footer__email" onSubmit={sendEmail}>
@@ -341,7 +343,7 @@ const Footer = () => {
       >
         <img
           className="footer__socialMedia footer__social-rarible"
-          src={Rarible}
+          src="https://res.cloudinary.com/dtzesssqo/image/upload/v1667673796/socialMedia/Rarible-white_feaweq.png"
           alt="rarible"
         />
       </a>
