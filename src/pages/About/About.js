@@ -6,13 +6,9 @@ import Title from '../../components/Title/Title';
 import Button from '../../components/Button/Button';
 import Biography from '../../components/Biography/Biography';
 import Teammate from '../../components/Teammate/Teammate';
-import Founder from '../../images/about/MeetTheFounder.jpg';
-import Equity from '../../images/about/equity.png';
-import Sustain from '../../images/about/sustainability.png';
-import Diversity from '../../images/about/Diversity1.jpeg';
-import './About.scss';
 import CommonButton from '../../components/CommonButton/CommonButton';
 import service from '../../services/services';
+import './About.scss';
 
 const About = () => {
   const token = localStorage.getItem('token');
@@ -90,7 +86,7 @@ const About = () => {
     <div className={darkMode ? 'about about__dark' : 'about'}>
       <LargeCard
         className={darkMode ? 'large__card large__card--dark' : 'large__card'}
-        image={Founder}
+        image="https://res.cloudinary.com/dtzesssqo/image/upload/v1667669564/about/MeetTheFounder_qxefc9.jpg"
         title="Meet the founder"
         paragraph1="My journey with Cointinuum could honestly be said to have begun in 2002 when I created my first real estate sales platform, Pinnacle Wholesale. The idea was then, as it is now, to solve problems in real estate transactions, particularly for investors. I’ve been building on this idea ever since."
         paragraph2="My inspiration has come from various other roles and assignments that I’ve accepted over the years. Whether working as a financial advisor, or in affordable housing or community redevelopment during the ’08 housing crisis, I’ve been fortunate to have a unique lens with which to see and address the most pressing issues of our time concerning community revitalization and economic redevelopment."
@@ -106,7 +102,7 @@ const About = () => {
             ? 'large__card large__reverse large__card--dark'
             : 'large__card large__reverse'
         }
-        image={Equity}
+        image="https://res.cloudinary.com/dtzesssqo/image/upload/v1667669565/about/equity_cqlyky.png"
         title="Economic Equity"
         paragraph1="We recognize that there are structural inequities which disproportionately affect the educational, career, and commercial opportunities within communities of color, and that these disparities tend to form a cycle of poverty and despair for those community members."
         paragraph2="Cointinuum addresses this disparity through an innovative social impact strategy which provides community redevelopment programming, technical education and jobs programs, and a commercial investment strategy that helps circulate local dollars throughout the community in greater amounts. This innovative and intentional approach will bring capital back into the community, empower its members and spread social and financial equity throughout underserved communities across the country, who need it the most."
@@ -129,7 +125,7 @@ const About = () => {
       {diversity && (
         <img
           className="about__diversity"
-          src={Diversity}
+          src="https://res.cloudinary.com/dtzesssqo/image/upload/v1667669565/about/Diversity1_d7xoes.jpg"
           alt="diversity initiative"
         />
       )}
@@ -139,7 +135,7 @@ const About = () => {
             ? 'large__card large__reverse large__card--dark'
             : 'large__card large__reverse'
         }
-        image={Sustain}
+        image="https://res.cloudinary.com/dtzesssqo/image/upload/v1667669564/about/sustainability_mcnzfo.png"
         title="Environmental Sustainability"
         paragraph1="Data centers are vital for our society to connect, conduct business, and store information. The rise of Bitcoin mining and other proof-of-work cryptocurrencies further accelerates the demand for data centers, but this comes at a heavy environmental cost. Traditional data centers are energy-intensive, causing significant greenhouse gas emissions. Cointinuum seeks to provide an environmentally responsible solution."
         paragraph2="We’re working to acquire and reposition property suitable for development or redevelopment into data centers, which will operate sustainably and efficiently through clean energy sourced from wind and hydroelectric power. Though Web3 is undeniably innovative and revolutionary, it is still tethered to the physical world that is fueling it. Ultimately, the source of this technology’s energy will determine its environmental impact. Cointinuum strives to be stewards of a more carbon-neutral blockchain system."
