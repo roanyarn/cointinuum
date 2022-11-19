@@ -3,6 +3,7 @@ import Img2 from '../images/connect/img2.jpeg';
 import Img3 from '../images/connect/img3.jpg';
 import Img4 from '../images/connect/img4.jpeg';
 import Img5 from '../images/connect/img5.png';
+import Img6 from '../images/connect/img6.png';
 
 const blogData = [
   {
@@ -47,6 +48,14 @@ const blogData = [
     paragraph: `On June 23, Charles Hoskinson, founder of Cardano (ADA), testified in Congress in regards to the future of crypto regulation. Taking on the face of crypto and blockchain industries, Hoskinson detailed digital asset regulation...`,
     date: 'Aug 24, 2022',
     image: Img5,
+    url: 'https://cointinuum.medium.com/a-step-towards-crypto-regulation-with-charles-hoskinson-813792d45067',
+  },
+  {
+    id: '6',
+    title: `Another tech "Golden Boy" loses his shine, and a whole lot of money`,
+    paragraph: `“The crypto exchange collapsed after facing a liquidity crunch that saw Bankman-Fried in need of an $8 billion injection. Rumors about FTX’s insolvency prompted a bank-run like dash by customers to withdraw funds...`,
+    date: 'Nov 19, 2022',
+    image: Img6,
     url: 'https://cointinuum.medium.com/a-step-towards-crypto-regulation-with-charles-hoskinson-813792d45067',
   },
 ];
