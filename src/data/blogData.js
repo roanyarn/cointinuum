@@ -56,7 +56,7 @@ const blogData = [
     paragraph: `“The crypto exchange collapsed after facing a liquidity crunch that saw Bankman-Fried in need of an $8 billion injection. Rumors about FTX’s insolvency prompted a bank-run like dash by customers to withdraw funds...`,
     date: 'Nov 19, 2022',
     image: Img6,
-    url: 'https://cointinuum.medium.com/a-step-towards-crypto-regulation-with-charles-hoskinson-813792d45067',
+    url: 'https://cointinuum.medium.com/another-tech-golden-boy-loses-his-shine-and-a-whole-lot-of-money-fed302df858c',
   },
 ];
 
