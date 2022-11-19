@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b0290401.css",
-    "main.js": "/static/js/main.764720e8.js",
+    "main.js": "/static/js/main.11151787.js",
     "static/media/final.mp4": "/static/media/final.98f962c46d986dd8d201.mp4",
     "static/media/animatedcommunity.png": "/static/media/animatedcommunity.183584c1c8a2a958872c.png",
     "static/media/animatedstability.png": "/static/media/animatedstability.22022d2dfdaf27987000.png",
@@ -25,17 +25,16 @@
     "static/media/img4.jpeg": "/static/media/img4.9e3374ec7720ae729e0b.jpeg",
     "static/media/Max.JPG": "/static/media/Max.ac55e09d027ec9a5ca61.JPG",
     "static/media/Austin.jpeg": "/static/media/Austin.d0df35261fc7bc946939.jpeg",
+    "static/media/img6.png": "/static/media/img6.2afe4efcd7c71983c024.png",
     "static/media/Image10.png": "/static/media/Image10.49b582d21d61a1c635d7.png",
     "static/media/Image9.png": "/static/media/Image9.ec101e213391f031823d.png",
     "static/media/event1.png": "/static/media/event1.7bdfecfba6ebdef75689.png",
     "static/media/event2.png": "/static/media/event2.2582ab82016aec6f24f0.png",
-    "static/media/Rene.jpg": "/static/media/Rene.f1de1d1045476555ba00.jpg",
     "static/media/Image5.png": "/static/media/Image5.947a07d69fb6feda07d3.png",
     "static/media/Alex.jpeg": "/static/media/Alex.4acdd6a080f5c3ce3fb0.jpeg",
     "static/media/streets.png": "/static/media/streets.f1a45604e042d34671c1.png",
     "static/media/sustainability.png": "/static/media/sustainability.69aa6db270e86ebb85cb.png",
     "static/media/newwlogo.png": "/static/media/newwlogo.001dd2f2fc65e3789481.png",
-    "static/media/Malik.jpeg": "/static/media/Malik.cbfeaf419d0a8f0b705f.jpeg",
     "static/media/newblogo.png": "/static/media/newblogo.b6c5bf92ef9c27e66d00.png",
     "static/media/equity.png": "/static/media/equity.b4b8d6d547c2831b9a10.png",
     "static/media/telegram.png": "/static/media/telegram.9b3668708410c45831f0.png",
@@ -64,10 +63,10 @@
     "static/media/linkedIn.png": "/static/media/linkedIn.68ac41e1459436bfd38f.png",
     "index.html": "/index.html",
     "main.b0290401.css.map": "/static/css/main.b0290401.css.map",
-    "main.764720e8.js.map": "/static/js/main.764720e8.js.map"
+    "main.11151787.js.map": "/static/js/main.11151787.js.map"
   },
   "entrypoints": [
     "static/css/main.b0290401.css",
-    "static/js/main.764720e8.js"
+    "static/js/main.11151787.js"
   ]
 }
